@@ -1,0 +1,4 @@
+repository "PURGED ROOKIE GAME JAM@PurpleMithril77@cloud"
+  path "/"
+    br "/main"
+    co "/main"
