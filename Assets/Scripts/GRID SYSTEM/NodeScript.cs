@@ -22,9 +22,15 @@ public class NodeScript : MonoBehaviour
     {
         if (!IsOccupied)
         {
+            Debug.Log("Node is not occupied. Trying to place tower.");
+
             towerManager.PlaceTower(this.transform.position, this.gameObject);
             IsOccupied = true;
             node.Walkable = false;
+        }
+        else
+        {
+            Debug.LogWarning("Node is already occupied. Tower placement failed.");
         }
     }
     public void SetWalkable(bool value)
@@ -37,7 +43,7 @@ public class NodeScript : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        Debug.Log(this.ToString());
+        Debug.Log($"Node clicked: {this.ToString()}");
     }
     public float X
     {

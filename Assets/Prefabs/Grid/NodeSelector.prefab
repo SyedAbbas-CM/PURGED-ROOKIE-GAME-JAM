@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 189929812833968633}
   - component: {fileID: 2143775976607568074}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NodeSelector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24,13 +24,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2987751464103190859}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.38762447, y: 0.11671147, z: 0.14850783}
   m_LocalScale: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2143775976607568074
 MonoBehaviour:

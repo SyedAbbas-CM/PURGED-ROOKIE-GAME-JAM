@@ -12,19 +12,30 @@ public class NodeSelectionScript : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+            Debug.Log("Mouse button pressed.");
+
             RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-            // We only check for layers in the "Selectable" layer
             int layerMask = LayerMask.GetMask("Selectable");
 
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
             {
+                Debug.Log("Raycast hit an object in the 'Selectable' layer.");
+
                 NodeScript nodeScript = hit.collider.GetComponent<NodeScript>();
                 if (nodeScript != null)
                 {
+                    //Debug.Log("Selected node: " + nodeScript.ToString());
                     nodeScript.HandleSelection(towerManager);
                 }
+                else
+                {
+                    Debug.LogError("NodeScript component not found on the hit object.");
+                }
+            }
+            else
+            {
+                Debug.Log("Raycast did not hit any object in the 'Selectable' layer.");
             }
         }
     }

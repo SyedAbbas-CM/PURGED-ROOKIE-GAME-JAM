@@ -30,9 +30,8 @@ public class GridGenerator : Singleton<GridGenerator>
     void Start()
     {
         mainCamera = Camera.main;
-        cameraCenter = mainCamera.ScreenToWorldPoint(new Vector3(Screen.width / 2, Screen.height / 2, mainCamera.nearClipPlane));
         nodeHolder = new GameObject("NodeHolder");
-        nodeHolder.transform.position = cameraCenter;
+        nodeHolder.transform.position = Vector3.zero;
         grid = new NodeScript[width, height];
         GenerateGrid();
     }
@@ -57,7 +56,7 @@ public class GridGenerator : Singleton<GridGenerator>
                 {
                     Position = new Vector3(x, 0, y),
                     Walkable = true,
-                    WorldPosition = transform.position
+                    WorldPosition = newNode.transform.position
                 };
 
                 // Add the node to the grid
@@ -67,13 +66,13 @@ public class GridGenerator : Singleton<GridGenerator>
                 nodeDictionary[nodeScript.node] = nodeScript;
 
                 // Make the node invisible
-                //newNode.GetComponent<Renderer>().enabled = false;
+                newNode.GetComponent<Renderer>().enabled = false;
             }
         }
         startNode = grid[startNodePosition.x, startNodePosition.y];
         endNode = grid[endNodePosition.x, endNodePosition.y];
-        startNode.GetComponent<Renderer>().enabled = true;
-        endNode.GetComponent<Renderer>().enabled = true;
+        //startNode.GetComponent<Renderer>().enabled = true;
+        //endNode.GetComponent<Renderer>().enabled = true;
         startNode.GetComponent<Renderer>().material.color = Color.green;
         endNode.GetComponent<Renderer>().material.color = Color.red;
 
@@ -163,6 +162,20 @@ public class GridGenerator : Singleton<GridGenerator>
         startNode.node.Walkable = true;
         endNode.node.Walkable = true;
         pathManager.CalculatePrimaryPath();
+        Camera.main.GetComponent<IsometricCameraController>().InitializeCamera();
+    }
+    public float GetGridWidth()
+    {
+        return width;
     }
 
+    public float GetGridDepth()
+    {
+        return height;
+    }
+
+    public Vector3 GetGridCenter()
+    {
+        return nodeHolder.transform.position;
+    }
 }

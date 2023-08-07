@@ -5,6 +5,7 @@ public class Enemy : MonoBehaviour
 {
     public float speed;
     public float health;
+    public float heightOffset = 0.5f; // To raise the enemy above the grid
     public GridGenerator gridGenerator;
     public PathManager pathManager;
     private List<Node> path;
@@ -15,12 +16,6 @@ public class Enemy : MonoBehaviour
         pathManager = PathManager.Instance;
 
         path = pathManager.GetPrimaryPath();
-
-        Debug.Log("Enemy started. Calculated path: ");
-        foreach (var node in path)
-        {
-            Debug.Log("Node: " + node.WorldPosition);
-        }
     }
 
     void Update()
@@ -29,7 +24,6 @@ public class Enemy : MonoBehaviour
         {
             if (pathManager.CurrentPathState == pathState.pathFound)
             {
-                Debug.LogWarning("Path is null or empty, recalculating...");
                 path = pathManager.GetPrimaryPath();
                 return;
             }
@@ -39,13 +33,27 @@ public class Enemy : MonoBehaviour
                 return;
             }
         }
-        Debug.Log("world positio: "+path[0].WorldPosition);
-        transform.position = Vector3.MoveTowards(transform.position, path[0].WorldPosition, speed * Time.deltaTime);
-        Debug.Log("DISTANCE: " + Vector3.Distance(transform.position, path[0].WorldPosition));
-        if (Vector3.Distance(transform.position, path[0].WorldPosition) < 0.01f)
+
+        Vector3 targetPosition = path[0].WorldPosition + Vector3.up * heightOffset; // Adjusted for height above grid
+        transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
+
+        // Enemy Facing Direction
+        Vector3 direction = (targetPosition - transform.position).normalized;
+        if (direction != Vector3.zero)
         {
-            
-            Debug.Log("Reached node: " + path[0].WorldPosition);
+            Quaternion lookRotation = Quaternion.LookRotation(direction);
+            transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * speed);
+        }
+
+        if (Vector3.Distance(transform.position, targetPosition) < 0.01f)
+        {
+            // Check if it's the last node in the path
+            if (path.Count == 1)
+            {
+                Die();
+                return;
+            }
+
             path.RemoveAt(0);
         }
     }
@@ -80,13 +88,11 @@ public class Enemy : MonoBehaviour
                 closestNode = node;
             }
         }
-        Debug.Log("Closest node to position " + position + " is: " + closestNode.WorldPosition);
         return closestNode;
     }
 
     private void TrimPathUntilNode(Node targetNode)
     {
-        Debug.Log("Trimming path until node: " + targetNode.WorldPosition);
         while (path.Count > 0 && path[0] != targetNode)
         {
             path.RemoveAt(0);

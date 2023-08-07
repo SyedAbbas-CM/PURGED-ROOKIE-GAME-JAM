@@ -75,7 +75,7 @@ public class PathManager : Singleton<PathManager>
             this.CurrentPathState = pathState.pathFound;
             foreach (var node in primaryPath)
             {
-                Debug.Log("Node: " + node.Position);
+                Debug.Log("Node: " + node.Position+" World Position: "+node.WorldPosition);
             }
             onPathGenerated();
         }

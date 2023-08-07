@@ -145,8 +145,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   health: 5
+  heightOffset: 0.5
   gridGenerator: {fileID: 0}
-  targetPosition: {x: 0, y: 0, z: 0}
   pathManager: {fileID: 0}
 --- !u!95 &4473999284929397545
 Animator:
