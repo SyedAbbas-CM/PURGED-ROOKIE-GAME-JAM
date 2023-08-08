@@ -1,13 +1,21 @@
 using UnityEngine;
 using System.Collections;
-public class EnemyManager : MonoBehaviour
+
+
+public enum WaveState
+{
+    Active,
+    InActive
+}
+public class EnemyManager : Singleton<EnemyManager>
 {
     public GameObject enemyPrefab;
     public GridGenerator gridGenerator; // Assign this from the inspector
 
+    public WaveState CurrentWaveState { get; private set; } = WaveState.InActive;
     private Vector3 spawnPosition;
     public bool isActive = false;
-
+    public int enemyCount { set; get; }
 
     public void Activate()
     {
@@ -30,11 +38,19 @@ public class EnemyManager : MonoBehaviour
     IEnumerator SpawnEnemiesRoutine()
     {
         // This is just a simple example, you can modify the logic as per your requirements
+        CurrentWaveState = WaveState.Active;
         for (int i = 0; i < 1; i++) // Spawning 5 enemies as an example
         {
             SpawnEnemy();
-
+            enemyCount++;
             yield return new WaitForSeconds(1f); // Wait for 1 second between enemy spawns
+        }
+    }
+    private void Update()
+    {
+        if(enemyCount <= 0)
+        {
+            CurrentWaveState = WaveState.InActive;
         }
     }
 }

@@ -20,6 +20,12 @@ public class NodeScript : MonoBehaviour
 
     public void HandleSelection(TowerManager towerManager)
     {
+        if (node == null)
+        {
+            Debug.LogError("Node is null in this NodeScript.");
+            return; // Exit early to avoid further errors
+        }
+
         if (!IsOccupied)
         {
             Debug.Log("Node is not occupied. Trying to place tower.");
@@ -37,13 +43,9 @@ public class NodeScript : MonoBehaviour
     {
         node.Walkable = value;
     }
-    public override string ToString()
-    {
-        return $"Node at Grid Position: ({node.Position.x}, {node.Position.y}), Walkable: {node.Walkable}";
-    }
     private void OnMouseDown()
     {
-        Debug.Log($"Node clicked: {this.ToString()}");
+        Debug.Log("Node clicked");
     }
     public float X
     {

@@ -71,8 +71,8 @@ public class GridGenerator : Singleton<GridGenerator>
         }
         startNode = grid[startNodePosition.x, startNodePosition.y];
         endNode = grid[endNodePosition.x, endNodePosition.y];
-        //startNode.GetComponent<Renderer>().enabled = true;
-        //endNode.GetComponent<Renderer>().enabled = true;
+        startNode.GetComponent<Renderer>().enabled = true;
+        endNode.GetComponent<Renderer>().enabled = true;
         startNode.GetComponent<Renderer>().material.color = Color.green;
         endNode.GetComponent<Renderer>().material.color = Color.red;
 
@@ -162,7 +162,7 @@ public class GridGenerator : Singleton<GridGenerator>
         startNode.node.Walkable = true;
         endNode.node.Walkable = true;
         pathManager.CalculatePrimaryPath();
-        Camera.main.GetComponent<IsometricCameraController>().InitializeCamera();
+        Camera.main.GetComponent<TopDownCameraController>().InitializeCamera();
     }
     public float GetGridWidth()
     {

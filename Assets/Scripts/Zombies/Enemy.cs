@@ -6,13 +6,29 @@ public class Enemy : MonoBehaviour
     public float speed;
     public float health;
     public float heightOffset = 0.5f; // To raise the enemy above the grid
-    public GridGenerator gridGenerator;
     public PathManager pathManager;
-    private List<Node> path;
+    public EnemyManager enemyManager;
+    public float rotationSpeed = 5f;
 
+    private List<Node> path;
+    private bool childrenVisible = false;
+
+
+    [ContextMenu("Toggle Children")]
+    public void ToggleChildrenVisibility()
+    {
+        childrenVisible = !childrenVisible;
+        foreach (Transform child in transform)
+        {
+            child.hideFlags = childrenVisible ? HideFlags.None : HideFlags.HideInHierarchy;
+        }
+    }
+    private void Awake()
+    {
+        enemyManager = EnemyManager.Instance;
+    }
     private void Start()
     {
-        gridGenerator = GridGenerator.Instance;
         pathManager = PathManager.Instance;
 
         path = pathManager.GetPrimaryPath();
@@ -42,7 +58,7 @@ public class Enemy : MonoBehaviour
         if (direction != Vector3.zero)
         {
             Quaternion lookRotation = Quaternion.LookRotation(direction);
-            transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * speed);
+            transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * rotationSpeed);
         }
 
         if (Vector3.Distance(transform.position, targetPosition) < 0.01f)
@@ -64,6 +80,7 @@ public class Enemy : MonoBehaviour
 
         if (health <= 0f)
         {
+            enemyManager.enemyCount--;
             Die();
         }
     }
@@ -72,6 +89,7 @@ public class Enemy : MonoBehaviour
     {
         Debug.Log("Enemy died.");
         Destroy(this.gameObject);
+        
     }
 
     private Node FindClosestNodeOnPath(Vector3 position, List<Node> path)

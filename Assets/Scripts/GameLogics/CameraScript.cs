@@ -1,67 +1,74 @@
 using UnityEngine;
 
-public class IsometricCameraController : MonoBehaviour
+public class TopDownCameraController : MonoBehaviour
 {
     public float panSpeed = 20f;
-    public float panBorderThickness = 10f;
+    public float panBorderThickness = 20f;
     public Vector2 panLimit;
+
+    public float rotationSpeed = 20f;
+    public KeyCode rotateRightKey = KeyCode.E;
+    public KeyCode rotateLeftKey = KeyCode.Q;
 
     public float scrollSpeed = 20f;
     public float minY = 20f;
     public float maxY = 120f;
+
+    public float zoomLevel;
+    public float sensitivity = 1;
+    public float speed = 30;
+    public float maxZoom = 30;
+    float zoomPosition;
+
 
     private GridGenerator gridGenerator;
 
     private void Start()
     {
         gridGenerator = GridGenerator.Instance;
-
-        if (gridGenerator.CurrentState == GridState.Generated)
-        {
-            InitializeCamera();
-        }
-    }
-    public void InitializeCamera()
-    {
-        // Adjust the camera's initial position to center on the grid
-        Vector3 gridCenter = gridGenerator.GetGridCenter();
-        transform.position = new Vector3(gridCenter.x, transform.position.y, gridCenter.z - gridGenerator.GetGridDepth() / 2);
-
-        // Dynamically set pan limits based on the grid size
-        panLimit = new Vector2(gridGenerator.GetGridWidth() / 2, gridGenerator.GetGridDepth() / 2);
     }
 
     void Update()
     {
         if (gridGenerator.CurrentState == GridState.Generated)
         {
-            Vector3 pos = transform.position;
-
+            // Panning Logic
             if (Input.GetKey("w") || Input.mousePosition.y >= Screen.height - panBorderThickness)
             {
-                pos.z += panSpeed * Time.deltaTime;
+                transform.Translate(Vector3.forward * panSpeed * Time.deltaTime, Space.World);
             }
             if (Input.GetKey("s") || Input.mousePosition.y <= panBorderThickness)
             {
-                pos.z -= panSpeed * Time.deltaTime;
-            }
-            if (Input.GetKey("d") || Input.mousePosition.x >= Screen.width - panBorderThickness)
-            {
-                pos.x += panSpeed * Time.deltaTime;
+                transform.Translate(Vector3.back * panSpeed * Time.deltaTime, Space.World);
             }
             if (Input.GetKey("a") || Input.mousePosition.x <= panBorderThickness)
             {
-                pos.x -= panSpeed * Time.deltaTime;
+                transform.Translate(Vector3.left * panSpeed * Time.deltaTime, Space.World);
+            }
+            if (Input.GetKey("d") || Input.mousePosition.x >= Screen.width - panBorderThickness)
+            {
+                transform.Translate(Vector3.right * panSpeed * Time.deltaTime, Space.World);
             }
 
-            float scroll = Input.GetAxis("Mouse ScrollWheel");
-            pos.y -= scroll * scrollSpeed * 100f * Time.deltaTime;
+            float scrollValue = Input.GetAxis("Mouse ScrollWheel");
 
-            pos.x = Mathf.Clamp(pos.x, -panLimit.x, panLimit.x);
-            pos.y = Mathf.Clamp(pos.y, minY, maxY);
-            pos.z = Mathf.Clamp(pos.z, -panLimit.y, panLimit.y);
-
-            transform.position = pos;
+            zoomLevel += Input.mouseScrollDelta.y * sensitivity;
+            zoomLevel = Mathf.Clamp(zoomLevel, 0, maxZoom);
+            zoomPosition = Mathf.MoveTowards(zoomPosition, zoomLevel, speed * Time.deltaTime);
+            transform.position = transform.position + (transform.forward * zoomPosition);
+        
         }
+    }
+    public void InitializeCamera()
+    {
+        // Adjust the camera's initial position to center on the grid
+        Vector3 gridCenter = gridGenerator.GetGridCenter();
+        panLimit = new Vector2(gridGenerator.GetGridWidth() / 2, gridGenerator.GetGridDepth() / 2);
+        transform.position = new Vector3(gridCenter.x, maxY, gridCenter.z);
+        // Look downwards
+        transform.rotation = Quaternion.Euler(45f, 0f, 0f);
+
+        // Dynamically set pan limits based on the grid size
+        panLimit = new Vector2(gridGenerator.GetGridWidth() / 2, gridGenerator.GetGridDepth() / 2);
     }
 }
