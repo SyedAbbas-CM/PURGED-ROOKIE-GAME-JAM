@@ -4,7 +4,7 @@ using UnityEngine;
 public class NodeScript : MonoBehaviour
 {
     public Node node;
-    private bool isOccupied = false;
+    public bool isOccupied = false;
 
     public bool IsOccupied
     {

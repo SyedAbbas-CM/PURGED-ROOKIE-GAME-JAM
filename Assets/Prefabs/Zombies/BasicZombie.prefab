@@ -144,8 +144,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f297a7b3297765c4285c768b994f314a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.6
-  health: 5
+  speed: 1
+  health: 20
   heightOffset: 0
   pathManager: {fileID: 0}
   enemyManager: {fileID: 0}

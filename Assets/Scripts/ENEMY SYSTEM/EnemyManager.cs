@@ -11,7 +11,7 @@ public class EnemyManager : Singleton<EnemyManager>
 {
     public GameObject enemyPrefab;
     public GridGenerator gridGenerator; // Assign this from the inspector
-
+    public int enemyMaxCount =100;
     public WaveState CurrentWaveState { get; private set; } = WaveState.InActive;
     private Vector3 spawnPosition;
     public bool isActive = false;
@@ -32,6 +32,7 @@ public class EnemyManager : Singleton<EnemyManager>
         {
             Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
             // You might want to have more spawning logic or other behaviors here
+            enemyCount++;
         }
     }
 
@@ -39,19 +40,22 @@ public class EnemyManager : Singleton<EnemyManager>
     {
         // This is just a simple example, you can modify the logic as per your requirements
         CurrentWaveState = WaveState.Active;
-        for (int i = 0; i < 1; i++) // Spawning 5 enemies as an example
+        for (int i = 0; i < enemyMaxCount; i++) // Spawning 5 enemies as an example
         {
+            
+            isActive = true;
+            CurrentWaveState = WaveState.Active;
             SpawnEnemy();
-            enemyCount++;
-            yield return new WaitForSeconds(1f); // Wait for 1 second between enemy spawns
+            yield return new WaitForSeconds(0.5f); // Wait for 1 second between enemy spawns
         }
     }
     private void Update()
     {
-        if(enemyCount <= 0)
-        {
-            CurrentWaveState = WaveState.InActive;
-        }
+
+    }
+    public void StartWave()
+    {
+        Activate();
     }
 }
 

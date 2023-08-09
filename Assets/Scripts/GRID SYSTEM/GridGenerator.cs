@@ -178,4 +178,18 @@ public class GridGenerator : Singleton<GridGenerator>
     {
         return nodeHolder.transform.position;
     }
+    public NodeScript GetNodeFromWorldPoint(Vector3 worldPosition)
+    {
+        // Assuming the node's X and Z coordinates correspond to the world position's X and Z
+        int x = Mathf.FloorToInt(worldPosition.x + width / 2.0f);  // Adjusting for the offset
+        int z = Mathf.FloorToInt(worldPosition.z + height / 2.0f); // Adjusting for the offset
+
+        // Check boundary conditions
+        if (x >= 0 && x < width && z >= 0 && z < height)
+        {
+            return grid[x, z];
+        }
+
+        return null; // or handle this situation accordingly
+    }
 }
