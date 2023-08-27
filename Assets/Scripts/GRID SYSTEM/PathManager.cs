@@ -105,6 +105,6 @@ public class PathManager : Singleton<PathManager>
     }
     void onPathGenerated()
     {
-        enemyManager.Activate();
+        //enemyManager.Activate();
     }
 }

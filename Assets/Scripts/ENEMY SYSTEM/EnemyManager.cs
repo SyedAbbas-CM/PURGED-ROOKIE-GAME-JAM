@@ -1,63 +1,186 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
+[System.Serializable]
+public class EnemyWave
+{
+    public GameObject enemyPrefab;
+    public int count;
+    public float delayBetweenSpawns;
+    public float probability = 1.0f; // Use this to control the probability of spawning this type of enemy in the wave.
+}
+
+[System.Serializable]
+public class WaveData
+{
+    public List<EnemyWave> enemyWaves;
+    public float delayBetweenWaves;
+}
+
+[System.Serializable]
+public class SpecialSpawn
+{
+    public GameObject specialEnemyPrefab;
+    public int waveNumber; // On which wave this special spawn should appear
+    public float delayAfterWaveStarts; // How many seconds after the wave starts should this enemy appear.
+}
 
 public enum WaveState
 {
-    Active,
-    InActive
+    NotStarted,
+    Spawning,
+    WaveActive,
+    BetweenWaves,
+    ExtendedBreak,
+    Completed
 }
+
 public class EnemyManager : Singleton<EnemyManager>
 {
-    public GameObject enemyPrefab;
-    public GridGenerator gridGenerator; // Assign this from the inspector
-    public int enemyMaxCount =100;
-    public WaveState CurrentWaveState { get; private set; } = WaveState.InActive;
+    public GridGenerator gridGenerator;
+    public List<WaveData> wavesData;
+    public List<SpecialSpawn> specialSpawns;
+    private int currentWaveIndex = 0;
+    public WaveState CurrentWaveState { get; private set; } = WaveState.NotStarted;
+    public float[] customWaveIntervals; // Manually set time between each wave
+    public WaveState[] customWaveStates; // Manually set states for each wave
     private Vector3 spawnPosition;
-    public bool isActive = false;
-    public int enemyCount { set; get; }
 
-    public void Activate()
+    public int enemyCount { get; set; } = 0;
+    public float extendedBreakDuration = 30.0f;
+
+    // UI Information
+    public int TotalWaves => wavesData.Count;
+    public int CurrentWave => currentWaveIndex;
+
+    private void Start()
     {
-        isActive = true;
-        // Spawn your first enemy, or start your spawning routine
-        spawnPosition = gridGenerator.GetStartNode().transform.position;
-        Debug.Log("A wave is incoming!");
-        StartCoroutine(SpawnEnemiesRoutine());
+        gridGenerator = GridGenerator.Instance;
+        getstartPosition();
     }
 
-    void SpawnEnemy()
+    public void getstartPosition()
     {
-        if (isActive)
+        if (gridGenerator.CurrentState == GridState.Generated)
         {
-            Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
-            // You might want to have more spawning logic or other behaviors here
-            enemyCount++;
+            spawnPosition = gridGenerator.GetStartNode().transform.position;
         }
     }
 
-    IEnumerator SpawnEnemiesRoutine()
-    {
-        // This is just a simple example, you can modify the logic as per your requirements
-        CurrentWaveState = WaveState.Active;
-        for (int i = 0; i < enemyMaxCount; i++) // Spawning 5 enemies as an example
-        {
-            
-            isActive = true;
-            CurrentWaveState = WaveState.Active;
-            SpawnEnemy();
-            yield return new WaitForSeconds(0.5f); // Wait for 1 second between enemy spawns
-        }
-    }
-    private void Update()
-    {
-
-    }
     public void StartWave()
     {
-        Activate();
+        if (CurrentWaveState == WaveState.BetweenWaves || CurrentWaveState == WaveState.NotStarted)
+        {
+            if (currentWaveIndex < wavesData.Count)
+            {
+                StartCoroutine(SpawnWaveRoutine(wavesData[currentWaveIndex]));
+                currentWaveIndex++;
+            }
+            else
+            {
+                Debug.Log("All waves are done!");
+                CurrentWaveState = WaveState.Completed;
+            }
+        }
+    }
+
+    IEnumerator SpawnWaveRoutine(WaveData waveData)
+    {
+        CurrentWaveState = WaveState.Spawning;
+
+        foreach (EnemyWave enemyWave in waveData.enemyWaves)
+        {
+            for (int i = 0; i < enemyWave.count; i++)
+            {
+                SpawnEnemy(enemyWave.enemyPrefab);
+                yield return new WaitForSeconds(enemyWave.delayBetweenSpawns);
+            }
+        }
+
+        // Check if there's a special spawn for this wave
+        foreach (SpecialSpawn specialSpawn in specialSpawns)
+        {
+            if (specialSpawn.waveNumber == currentWaveIndex)
+            {
+                yield return new WaitForSeconds(specialSpawn.delayAfterWaveStarts);
+                SpawnEnemy(specialSpawn.specialEnemyPrefab);
+            }
+        }
+
+        // Check your custom wave states
+        if (currentWaveIndex < customWaveStates.Length)
+        {
+            CurrentWaveState = customWaveStates[currentWaveIndex];
+        }
+        else
+        {
+            CurrentWaveState = WaveState.BetweenWaves; // Default
+        }
+
+        if (IsBigWave(currentWaveIndex))
+        {
+            Debug.Log("Big wave completed! Extended break.");
+            yield return new WaitForSeconds(extendedBreakDuration);
+        }
+        else if (currentWaveIndex < customWaveIntervals.Length)
+        {
+            // Custom interval time from the array
+            yield return new WaitForSeconds(customWaveIntervals[currentWaveIndex]);
+        }
+        else
+        {
+            // Default interval time
+            yield return new WaitForSeconds(waveData.delayBetweenWaves);
+        }
+
+        CurrentWaveState = WaveState.BetweenWaves;
+    }
+
+    void SpawnEnemy(GameObject enemyPrefab)
+    {
+        Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
+        enemyCount++;
+    }
+
+    public void EnemyDied()
+    {
+        enemyCount--;
+
+        if (enemyCount <= 0 && CurrentWaveState == WaveState.WaveActive)
+        {
+            CurrentWaveState = WaveState.BetweenWaves;
+
+            if (currentWaveIndex >= wavesData.Count)
+            {
+                CurrentWaveState = WaveState.Completed;
+                Debug.Log("All waves completed!");
+            }
+        }
+    }
+
+    bool IsBigWave(int waveIndex)
+    {
+        return (waveIndex % 3 == 0);
+    }
+    public void BreakNearbyWall(GameObject enemyGameObject)
+    {
+        NodeScript nearbyNode = GridGenerator.Instance.GetNodeScriptAtPosition(enemyGameObject.transform.position);
+        List<NodeScript> neighbors = GridGenerator.Instance.GetNeighbours(nearbyNode);
+
+        foreach (NodeScript neighbor in neighbors)
+        {
+            if (neighbor.IsOccupied && !neighbor.node.Walkable)
+            {
+                TowerManager.Instance.RemoveWallAt(neighbor.node.WorldPosition);
+                // Also regenerate the path
+                PathManager.Instance.CalculatePrimaryPath();
+                break;
+            }
+        }
     }
 }
+
 
 
 

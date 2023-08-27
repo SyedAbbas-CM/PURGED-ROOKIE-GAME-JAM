@@ -24,6 +24,7 @@ public class GridGenerator : Singleton<GridGenerator>
     public Vector2Int startNodePosition = new Vector2Int(0, 0); // Default bottom-left
     public Vector2Int endNodePosition = new Vector2Int(0, 9);   // Default top-left\
     public PathManager pathManager;
+    public EnemyManager enemyManager;
     public GridState CurrentState { get; private set; } = GridState.NotGenerated;
 
 
@@ -33,17 +34,17 @@ public class GridGenerator : Singleton<GridGenerator>
         nodeHolder = new GameObject("NodeHolder");
         nodeHolder.transform.position = Vector3.zero;
         grid = new NodeScript[width, height];
-        GenerateGrid();
+        GenerateGrid(width, height);
     }
-    void GenerateGrid()
+    public void GenerateGrid(int W, int H)
     {
         Vector3 offset = new Vector3(width / 2.0f, 0, height / 2.0f);
-        for (int x = 0; x < width; x++)
+        for (int x = 0; x < W; x++)
         {
-            for (int y = 0; y < height; y++)
+            for (int y = 0; y < H; y++)
             {
                 // Instantiate a new node at the current position
-                Vector3 instantiatePosition = new Vector3(x, 0, y) - offset;
+                Vector3 instantiatePosition = new Vector3(x*2, 0, y*2) - offset;
                 GameObject newNode = Instantiate(nodePrefab, instantiatePosition, Quaternion.identity);
 
 
@@ -66,7 +67,7 @@ public class GridGenerator : Singleton<GridGenerator>
                 nodeDictionary[nodeScript.node] = nodeScript;
 
                 // Make the node invisible
-                newNode.GetComponent<Renderer>().enabled = false;
+                //newNode.GetComponent<Renderer>().enabled = false;
             }
         }
         startNode = grid[startNodePosition.x, startNodePosition.y];
@@ -75,6 +76,8 @@ public class GridGenerator : Singleton<GridGenerator>
         endNode.GetComponent<Renderer>().enabled = true;
         startNode.GetComponent<Renderer>().material.color = Color.green;
         endNode.GetComponent<Renderer>().material.color = Color.red;
+        startNode.canPlace = false;
+        endNode.canPlace = false;
 
         CurrentState = GridState.Generated;
 
@@ -126,21 +129,7 @@ public class GridGenerator : Singleton<GridGenerator>
             return null;
         }
     }
-    public NodeScript GetNodeScriptAtPosition(Vector3 position)
-    {
-        int x = Mathf.RoundToInt(position.x);
-        int z = Mathf.RoundToInt(position.z);
 
-        if (x >= 0 && x < width && z >= 0 && z < height)
-        {
-            return grid[x, z];
-        }
-        else
-        {
-            Debug.LogError("Position out of grid bounds");
-            return null;
-        }
-    }
 
     void expandGrid()
     {
@@ -163,6 +152,7 @@ public class GridGenerator : Singleton<GridGenerator>
         endNode.node.Walkable = true;
         pathManager.CalculatePrimaryPath();
         Camera.main.GetComponent<TopDownCameraController>().InitializeCamera();
+        enemyManager.getstartPosition();
     }
     public float GetGridWidth()
     {
@@ -191,5 +181,29 @@ public class GridGenerator : Singleton<GridGenerator>
         }
 
         return null; // or handle this situation accordingly
+    }
+    public NodeScript GetNodeAtPosition(int x, int y)
+    {
+        // Assuming your grid data is stored in a 2D array called nodes.
+        if (x >= 0 && y >= 0 && x < width && y < height)
+        {
+            return grid[x, y].GetComponent<NodeScript>();
+        }
+        return null;
+    }
+    public NodeScript GetNodeScriptAtPosition(Vector3 position)
+    {
+        int x = Mathf.FloorToInt((position.x + width) / 2.0f); // Adjust for the node's spacing
+        int z = Mathf.FloorToInt((position.z + height) / 2.0f);
+
+        if (x >= 0 && x < width && z >= 0 && z < height)
+        {
+            return grid[x, z];
+        }
+        else
+        {
+            Debug.LogError("Position out of grid bounds");
+            return null;
+        }
     }
 }

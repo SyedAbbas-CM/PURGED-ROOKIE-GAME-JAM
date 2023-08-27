@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 669917932293079367}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Origin Ref
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7159673715000003394}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collision_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4832697763097799449}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sprite First Ref_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,7 +103,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4320058819604494398}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Overhead Ref_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -125,6 +125,111 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1476780574507397974}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1257294502914087113
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2894002554842429583}
+  - component: {fileID: 1438024867635694040}
+  - component: {fileID: 7001031375141328027}
+  - component: {fileID: 7275053283909283685}
+  m_Layer: 0
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2894002554842429583
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257294502914087113}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0.009999947, y: 0.28650117, z: 0.15627895}
+  m_LocalScale: {x: 1.5036999, y: 0.010000001, z: 0.009999997}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3114783200606152631}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &1438024867635694040
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257294502914087113}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &7001031375141328027
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257294502914087113}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 314d143cd74c45444bd33de4625ec515, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7275053283909283685
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257294502914087113}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1299651013380898186
 GameObject:
   m_ObjectHideFlags: 0
@@ -134,7 +239,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1503270089440835687}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -166,7 +271,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2414905745522367489}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ammobelt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -198,7 +303,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1776018206757359297}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bone_Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -233,7 +338,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6031536261577073989}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Laser_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -264,12 +369,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1153606562267783359}
-  - component: {fileID: 5107719534999648965}
   - component: {fileID: 4319452417461105891}
   - component: {fileID: 459910788232054669}
   - component: {fileID: -3007612291114400608}
   - component: {fileID: 8653601685315145103}
-  m_Layer: 0
+  - component: {fileID: 560448457582004225}
+  m_Layer: 8
   m_Name: SENTRYMG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -285,7 +390,7 @@ Transform:
   m_GameObject: {fileID: 1966313418859723269}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.943, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -294,27 +399,6 @@ Transform:
   - {fileID: 3114783200606152631}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &5107719534999648965
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1966313418859723269}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 7d3e8db321d198a46a3ec600c2290ae7, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &4319452417461105891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -327,8 +411,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f6a5db8204b6d84b8f4106762183059, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: 
-  iconSprite: {fileID: 0}
   range: 10
   damage: 1
   fireRate: 2
@@ -340,6 +422,9 @@ MonoBehaviour:
   lineDisplayTime: 0.01
   lineTrailColor: {r: 1, g: 0.93979645, b: 0, a: 1}
   towerType: 0
+  impactEffect: {fileID: 989851193739761705, guid: b59b9659ef849c543abf8d815c99c951,
+    type: 3}
+  isSlow: 0
 --- !u!212 &459910788232054669
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -405,7 +490,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: MG Sentry
-  iconSprite: {fileID: 21300000, guid: 6162d4451ac3a2345bced7e745d6fa33, type: 3}
+  iconSprite: {fileID: 21300000, guid: 0440904ae8c932f4784548c349e799a9, type: 3}
 --- !u!120 &8653601685315145103
 LineRenderer:
   serializedVersion: 2
@@ -427,7 +512,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: ef96d9e58b214354b9da9b94745d8377, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -511,7 +596,7 @@ LineRenderer:
     numCornerVertices: 0
     numCapVertices: 0
     alignment: 0
-    textureMode: 0
+    textureMode: 1
     textureScale: {x: 1, y: 1}
     shadowBias: 0.5
     generateLightingData: 0
@@ -519,6 +604,27 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 0
+--- !u!65 &560448457582004225
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966313418859723269}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 2.05, z: 1}
+  m_Center: {x: 0, y: -0.28, z: 0}
 --- !u!1 &2036640897504127730
 GameObject:
   m_ObjectHideFlags: 0
@@ -528,7 +634,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5741219517865045933}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Laser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -560,7 +666,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3114783200606152631}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BarrelDIR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -576,10 +682,11 @@ Transform:
   m_GameObject: {fileID: 2176389602408675291}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2894002554842429583}
   - {fileID: 1614981025418341784}
   m_Father: {fileID: 1153606562267783359}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
@@ -592,7 +699,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1953255915987425325}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Boom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -624,7 +731,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 475848749141117956}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bone_Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -659,7 +766,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5743589581725039857}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ammobelt_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -690,7 +797,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4015061299300428633}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sprite RallyPoint Ref_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -721,7 +828,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7217398436679289386}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sprite Third Ref
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -753,7 +860,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5205389871946577176}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sprite Second Ref
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -785,7 +892,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1476780574507397974}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Overhead Ref
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -817,7 +924,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1704667006518212365}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Barrel_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -848,7 +955,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5082342046578768517}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Origin Ref_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -880,7 +987,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6721344127408487574}
   - component: {fileID: 2461353206215159522}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SENTRYMG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -896,7 +1003,7 @@ Transform:
   m_GameObject: {fileID: 7274607104418602200}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -0, y: -0, z: -0.93}
+  m_LocalPosition: {x: 0, y: -0, z: 0}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -922,7 +1029,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a5d303f11b72ded41b75d546fb7fbb34, type: 2}
+  - {fileID: 2100000, guid: a340e678dc22f4545b374635f9164abe, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -982,7 +1089,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5345602557839632483}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sprite First Ref
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1014,7 +1121,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1614981025418341784}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bone_Root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1029,9 +1136,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7526625955339778250}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.50237495, y: 0.5023749, z: 0.4976138, w: 0.4976137}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 99.99997, y: 99.999985, z: 99.999985}
+  m_LocalRotation: {x: -0.50237495, y: 0.5023749, z: 0.4976138, w: 0.49761367}
+  m_LocalPosition: {x: 0, y: -0.91, z: -0.28000003}
+  m_LocalScale: {x: 99.99997, y: 100, z: 99.99997}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4395122151314688451}
@@ -1047,7 +1154,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5343944259032472225}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1079,7 +1186,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 596379568310769918}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sprite Second Ref_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1110,7 +1217,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3976314903575495706}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SENTRYMG Nodes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1144,7 +1251,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 26289692527558221}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sprite Third Ref_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1175,7 +1282,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4395122151314688451}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bone_Chest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1207,7 +1314,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6342449412579775657}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sprite RallyPoint Ref
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1239,7 +1346,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 102980380677241782}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Boom_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}

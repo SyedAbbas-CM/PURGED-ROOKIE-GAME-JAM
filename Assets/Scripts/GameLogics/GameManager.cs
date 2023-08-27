@@ -1,19 +1,61 @@
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : Singleton<GameManager>
 {
-    public PathManager pathManager;
+    public List<GameObject> managersToLoad; // Managers to instantiate
+    public GameObject UIPrefab; // UI to instantiate in each scene
 
-    private void Start()
+    private GameObject currentUIInstance; // To track the instantiated UI
+
+    private void Awake()
     {
-        // Simulating the end of the setup phase.
-        // In a real scenario, you'd transition between phases based on player input or other triggers.
-        EndSetupPhase();
+        DontDestroyOnLoad(gameObject);
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+
+        SceneManager.sceneLoaded += OnSceneLoaded; // Subscribe to the event
+
+        // Instantiate the managers
+        foreach (GameObject managerPrefab in managersToLoad)
+        {
+            Instantiate(managerPrefab);
+        }
     }
 
-    void EndSetupPhase()
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        //pathManager.CalculatePrimaryPath();
-        // Start spawning enemies or begin the combat phase here.
+        SetupUI();
+    }
+
+    private void SetupUI()
+    {
+        if (UIPrefab)
+        {
+            // If there's a UI from previous scene, destroy it
+            if (currentUIInstance)
+            {
+                Destroy(currentUIInstance);
+            }
+            currentUIInstance = Instantiate(UIPrefab);
+        }
+        else
+        {
+            Debug.LogError("UIPrefab not set in GameManager.");
+        }
+    }
+
+    public void LoadNewLevel(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+    }
+
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded; // Unsubscribe when destroyed
     }
 }

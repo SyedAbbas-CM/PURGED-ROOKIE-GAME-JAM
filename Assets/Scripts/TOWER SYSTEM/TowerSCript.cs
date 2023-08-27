@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-public enum TowerType { DirectFire, Cannon }
+public enum TowerType { DirectFire, Cannon,Wall }
 
-public class Tower : PlaceableItem
+public class Tower : MonoBehaviour
 {
     public float range= 10f;
     public float damage=1f;
@@ -15,9 +15,10 @@ public class Tower : PlaceableItem
     public GameObject bulletPrefab;
     public LineRenderer lineRenderer;
     public float lineDisplayTime = 0.1f;
-    public Color lineTrailColor = Color.red;
+    public Color lineTrailColor = Color.yellow;
     public TowerType towerType;
-
+    public GameObject impactEffect;
+    public bool isSlow = false;
     private EnemyManager enemyManager;
     private GameObject target;
     private float fireCountdown = 0f;
@@ -26,17 +27,27 @@ public class Tower : PlaceableItem
 
     private void Awake()
     {
+
         enemyManager = EnemyManager.Instance;
+
+        if (towerType == TowerType.Wall) return;
+
         if (towerType == TowerType.DirectFire)
         {
             lineRenderer = GetComponent<LineRenderer>();
             lineRenderer.startColor = lineTrailColor;
-            lineRenderer.endColor = lineTrailColor;
+            lineRenderer.endColor = Color.red;
             lineRenderer.enabled = false;
         }
     }
     void Update()
     {
+        if(towerType == TowerType.Wall)
+        {
+            return;
+        }
+
+
         if (towerType == TowerType.DirectFire && lineRenderer != null)
         {
             lineRenderer.startColor = lineTrailColor;
@@ -86,7 +97,7 @@ public class Tower : PlaceableItem
 
     void FindClosestEnemy()
     {
-        if(enemyManager.CurrentWaveState == WaveState.InActive)
+        if(enemyManager.CurrentWaveState == WaveState.NotStarted || enemyManager.CurrentWaveState == WaveState.Completed)
         {
             Debug.Log("Wave Inactive! not finding target!");
             return;
@@ -122,11 +133,18 @@ public class Tower : PlaceableItem
 
     void AttackEnemy(GameObject enemy)
     {
+        
         if (enemiesInRange.Count == 0) return;
+
+        
 
         if (towerType == TowerType.DirectFire)
         {
             StartCoroutine(showLineTrail(target.transform.position));
+            GameObject instance = Instantiate(impactEffect, target.transform.position, transform.rotation);
+            //destroy impact effect after 2 seconds
+            Destroy(instance,2f);
+            
         }
         else if (towerType == TowerType.Cannon)
         {
@@ -140,11 +158,20 @@ public class Tower : PlaceableItem
             if(enemyBeingAttacked != null)
             {
                 enemyBeingAttacked.TakeDamage(damage);
+                if (isSlow)
+                {
+                    enemyBeingAttacked.currentSpeed = enemyBeingAttacked.currentSpeed / 2;
+                }
             }
         }
         else
         {
+            Collider[] colliders = Physics.OverlapSphere(transform.position, AOE);
+            foreach(Collider nearbyObject in colliders)
+            {
+                Rigidbody rb = nearbyObject.GetComponent<Rigidbody>();
 
+            }
         }
 
     }

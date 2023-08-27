@@ -4,29 +4,50 @@ using UnityEngine.UI;
 
 public class SelectionButton : MonoBehaviour
 {
-    public int itemIndex; // This will store either a Tower or a Wall prefab
+    public int itemIndex; // This will store either a Tower or a Wall prefab index
     private UIManager uiManager;
-    private GameObject itemPrefab;
+    private TowerManager.PlacementType placementType; // This will determine if it's a tower or wall
 
-    public void Initialize(GameObject item, UIManager manager, int index)
+    public void Initialize(GameObject prefab, UIManager uiManager)
     {
-        itemPrefab = item;
-        uiManager = manager; // No need for the static reference since we're passing the manager directly now.
-        itemIndex = index;
+        this.uiManager = uiManager;
 
-        // Assume both Tower and Wall have a common interface or base class called 'PlaceableItem' which has a 'itemName' property
-        GetComponentInChildren<TextMeshProUGUI>().text = itemPrefab.GetComponent<PlaceableItem>().itemName;
+        // Determine if it's a tower or wall
+        if (uiManager.towerManager.towerPrefabs.Contains(prefab))
+        {
+            itemIndex = uiManager.towerManager.towerPrefabs.IndexOf(prefab);
+            placementType = TowerManager.PlacementType.Tower;
+        }
+        else if (uiManager.towerManager.wallPrefabs.Contains(prefab))
+        {
+            itemIndex = uiManager.towerManager.wallPrefabs.IndexOf(prefab);
+            placementType = TowerManager.PlacementType.Wall;
+        }
+        else
+        {
+            Debug.LogError("The provided prefab is neither a tower nor a wall.");
+            return;
+        }
+
+        // Add the click listener to the button
+        GetComponent<Button>().onClick.AddListener(OnClick);
     }
 
-    public void OnButtonPressed()
+    public void OnClick()
     {
-        if (uiManager.towerManager.currentPlacementType == TowerManager.PlacementType.Tower)
+        if (placementType == TowerManager.PlacementType.Tower)
         {
+
             uiManager.towerManager.SelectTower(itemIndex);
+            uiManager.currentState = UIState.PlacingTower;
+
+
         }
-        else if (uiManager.towerManager.currentPlacementType == TowerManager.PlacementType.Wall)
+        else if (placementType == TowerManager.PlacementType.Wall)
         {
             uiManager.towerManager.SelectWall(itemIndex);
+            uiManager.currentState = UIState.PlacingTower;
         }
     }
+
 }

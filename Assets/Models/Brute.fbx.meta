@@ -1,0 +1,651 @@
+fileFormatVersion: 2
+guid: a10c78a04c048d440917975e8708f1e3
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: FleshGolem Nodes|all sequences
+      takeName: FleshGolem Nodes|all sequences
+      internalID: -3168468426081197514
+      firstFrame: 0
+      lastFrame: 2406
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: FleshGolem Nodes|Attack
+      takeName: FleshGolem Nodes|Attack
+      internalID: -1680192886440082424
+      firstFrame: 0
+      lastFrame: 25
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: FleshGolem Nodes|Death
+      takeName: FleshGolem Nodes|Death
+      internalID: -1889317848189925756
+      firstFrame: 0
+      lastFrame: 64
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: FleshGolem Nodes|Walk
+      takeName: FleshGolem Nodes|Walk
+      internalID: 4321791785496031616
+      firstFrame: 0
+      lastFrame: 32
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 1
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.01
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton:
+    - name: Brute(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Light
+      parentName: Brute(Clone)
+      position: {x: -0.040762454, y: 0.05903862, z: -0.010054539}
+      rotation: {x: 0.52327543, y: -0.34203398, z: 0.72694236, w: 0.28416628}
+      scale: {x: 100.00001, y: 100, z: 100}
+    - name: Camera
+      parentName: Brute(Clone)
+      position: {x: -0.073588915, y: 0.049583092, z: 0.06925791}
+      rotation: {x: 0.09062851, y: 0.89379627, z: -0.20997299, w: 0.3857799}
+      scale: {x: 100, y: 100.00001, z: 99.99999}
+    - name: FleshGolem
+      parentName: Brute(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 100, y: 100, z: 100}
+    - name: FleshGolem Nodes
+      parentName: Brute(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 100, y: 100, z: 100}
+    - name: Bone Root
+      parentName: FleshGolem Nodes
+      position: {x: 0.00094086595, y: -0.000039765833, z: 0.009589016}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bone Chest
+      parentName: Bone Root
+      position: {x: -0.00010788602, y: 0.000035761546, z: 0.00010141678}
+      rotation: {x: -0.03672317, y: -0.020117475, z: -0.034789905, w: 0.9985171}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Sphere14
+      parentName: Bone Chest
+      position: {x: 0.000024758025, y: 0.00021802132, z: 0.0033798304}
+      rotation: {x: 2.3283067e-10, y: -2.9103834e-11, z: -2.2737366e-13, w: 1}
+      scale: {x: 0.99999994, y: 0.9999999, z: 0.99999994}
+    - name: Sphere14_end
+      parentName: Sphere14
+      position: {x: -0, y: 0.00049999997, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bone Sphere12
+      parentName: Bone Chest
+      position: {x: 0.002110246, y: 0.0030865795, z: 0.0035833048}
+      rotation: {x: -0.01224841, y: -0.07161129, z: -0.56303966, w: 0.8232304}
+      scale: {x: 1, y: 0.9999999, z: 0.99999994}
+    - name: Sphere15
+      parentName: Bone Sphere12
+      position: {x: -0.000094550276, y: 0.0019939507, z: 0.0019990979}
+      rotation: {x: 0, y: -8.1490725e-10, z: 5.820766e-11, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Sphere15_end
+      parentName: Sphere15
+      position: {x: -0, y: 0.00049999997, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bone Sphere13
+      parentName: Bone Sphere12
+      position: {x: 0.000018919467, y: 0.00177335, z: -0.00020770144}
+      rotation: {x: 0.38596296, y: -0.1621946, z: -0.33169878, w: 0.8454002}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Sphere16
+      parentName: Bone Sphere13
+      position: {x: -0.000075350334, y: 0.0009637804, z: -0.00083869847}
+      rotation: {x: 0, y: -8.1490725e-10, z: 5.820766e-11, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Sphere16_end
+      parentName: Sphere16
+      position: {x: -0, y: 0.00049999997, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bone ForeArmL02
+      parentName: Bone Sphere13
+      position: {x: -0.00041808005, y: 0.0015616603, z: -0.0022377982}
+      rotation: {x: -0.013388493, y: 0.27612618, z: 0.05309881, w: 0.95956016}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: ForeArmL05
+      parentName: Bone ForeArmL02
+      position: {x: -0.00070560013, y: 0.00082356954, z: -0.0021375595}
+      rotation: {x: -0.47094783, y: -0.00000068545324, z: -0.038765308, w: 0.88130885}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ForeArmL05_end
+      parentName: ForeArmL05
+      position: {x: -0, y: 0.00049999997, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Hand Left Ref
+      parentName: Bone ForeArmL02
+      position: {x: -0.0015067133, y: 0.0014927194, z: -0.0019828097}
+      rotation: {x: 2.3283064e-10, y: 0.000000007490598, z: 3.4924597e-10, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Hand Left Ref_end
+      parentName: Hand Left Ref
+      position: {x: -0, y: 0.00049999997, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bone Sphere08
+      parentName: Bone Chest
+      position: {x: 0.001824686, y: -0.00295801, z: 0.005312504}
+      rotation: {x: -0.041652698, y: -0.040267043, z: 0.045075838, w: 0.9973023}
+      scale: {x: 1, y: 0.9999999, z: 0.99999994}
+    - name: Sphere17
+      parentName: Bone Sphere08
+      position: {x: 0.0021973203, y: -0.00149687, z: -0.00034960094}
+      rotation: {x: 0.0000000016880224, y: 0.0000000017462299, z: 2.7755576e-17, w: 1}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+    - name: Sphere17_end
+      parentName: Sphere17
+      position: {x: -0, y: 0.00049999997, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bone Sphere09
+      parentName: Bone Sphere08
+      position: {x: 0.00004933041, y: -0.0019416797, z: -0.00049449975}
+      rotation: {x: 0.0000000016880224, y: 0.0000000017462299, z: 2.7755576e-17, w: 1}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+    - name: Sphere18
+      parentName: Bone Sphere09
+      position: {x: -0.00007171979, y: -0.0007662097, z: -0.0010200017}
+      rotation: {x: 0.0000000016880224, y: 0.0000000017462299, z: 2.7755576e-17, w: 1}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+    - name: Sphere18_end
+      parentName: Sphere18
+      position: {x: -0, y: 0.00049999997, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bone ForeArmL01
+      parentName: Bone Sphere09
+      position: {x: -0.0005090096, y: -0.0015634298, z: -0.0030150025}
+      rotation: {x: 0.02250073, y: 0.28774688, z: 0.012082884, w: 0.95736593}
+      scale: {x: 1, y: 0.9999999, z: 0.99999994}
+    - name: ForeArmL04
+      parentName: Bone ForeArmL01
+      position: {x: -0.00014540988, y: -0.0005908295, z: -0.0019413402}
+      rotation: {x: 0.0000000011641532, y: -2.182765e-11, z: -1.1641532e-10, w: 1}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: ForeArmL04_end
+      parentName: ForeArmL04
+      position: {x: -0, y: 0.00049999997, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Hand Right Ref
+      parentName: Bone ForeArmL01
+      position: {x: -0.0017855478, y: -0.0013343598, z: -0.0030542593}
+      rotation: {x: 0.0000000011641532, y: -2.182765e-11, z: -1.1641532e-10, w: 1}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: Hand Right Ref_end
+      parentName: Hand Right Ref
+      position: {x: -0, y: 0.00049999997, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Weapon Ref
+      parentName: Bone ForeArmL01
+      position: {x: -0.0025267862, y: -0.0013343598, z: -0.0030542593}
+      rotation: {x: 0.0000000011641532, y: -2.182765e-11, z: -1.1641532e-10, w: 1}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: Weapon Ref_end
+      parentName: Weapon Ref
+      position: {x: -0, y: 0.00049999997, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bone Head
+      parentName: Bone Chest
+      position: {x: 0.0003193663, y: 0.000110678826, z: 0.005638951}
+      rotation: {x: 0.0019190421, y: 0.01756662, z: 0.03453965, w: 0.9992471}
+      scale: {x: 0.99999994, y: 0.9999999, z: 0.99999994}
+    - name: Box03
+      parentName: Bone Head
+      position: {x: 0.0010416231, y: -0.00012848346, z: 0.0016376988}
+      rotation: {x: -1.0913937e-11, y: 3.0553338e-13, z: -9.0949427e-13, w: 1}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Box03_end
+      parentName: Box03
+      position: {x: -0, y: 0.00049999997, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bone Mesh11
+      parentName: Bone Head
+      position: {x: -0.002405907, y: 0.00028674796, z: 0.0018653981}
+      rotation: {x: -1.0913937e-11, y: 3.0553338e-13, z: -9.0949427e-13, w: 1}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Bone Mesh11_end
+      parentName: Bone Mesh11
+      position: {x: -0, y: 0.00049999997, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Head Ref
+      parentName: Bone Head
+      position: {x: -0.00071073795, y: 0.00023290102, z: 0.0014147991}
+      rotation: {x: -1.0913937e-11, y: 3.0553338e-13, z: -9.0949427e-13, w: 1}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Head Ref_end
+      parentName: Head Ref
+      position: {x: -0, y: 0.00049999997, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Chest Ref
+      parentName: Bone Chest
+      position: {x: -0.00049194, y: 0.00017918731, z: 0.00337143}
+      rotation: {x: 2.3283067e-10, y: -2.9103834e-11, z: -2.2737366e-13, w: 1}
+      scale: {x: 0.99999994, y: 0.9999999, z: 0.99999994}
+    - name: Chest Ref_end
+      parentName: Chest Ref
+      position: {x: -0, y: 0.00049999997, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bone Pelvis01
+      parentName: Bone Root
+      position: {x: -0.0011048919, y: 0.000055636978, z: -0.00085102004}
+      rotation: {x: 0, y: 0, z: 0.043619413, w: 0.99904823}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Pelvis02
+      parentName: Bone Pelvis01
+      position: {x: -3.427267e-11, y: 0.00016022893, z: 0.0004270088}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Pelvis02_end
+      parentName: Pelvis02
+      position: {x: -0, y: 0.00049999997, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BoneSphere05
+      parentName: Bone Pelvis01
+      position: {x: 0.00015215595, y: -0.0016432712, z: -0.00046029128}
+      rotation: {x: 0.09026145, y: 0.028082274, z: -0.00083861506, w: 0.9955218}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Sphere19
+      parentName: BoneSphere05
+      position: {x: 3.5762785e-11, y: -0.00072800973, z: -0.0014883096}
+      rotation: {x: 0.0000000019499566, y: 8.1490725e-10, z: 3.85186e-34, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Sphere19_end
+      parentName: Sphere19
+      position: {x: -0, y: 0.00049999997, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bone ShinL01
+      parentName: BoneSphere05
+      position: {x: 0.000457715, y: -0.0015779699, z: -0.0035081306}
+      rotation: {x: 0.070526704, y: -0.15934187, z: 0.030481962, w: 0.98422915}
+      scale: {x: 0.99999994, y: 1, z: 0.99999994}
+    - name: ShinL03
+      parentName: Bone ShinL01
+      position: {x: -0.00004764695, y: -0.000043030515, z: -0.00071678014}
+      rotation: {x: 9.313226e-10, y: 0.0000000146683306, z: -0.000000007916242, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ShinL03_end
+      parentName: ShinL03
+      position: {x: -0, y: 0.00049999997, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bone Mesh05
+      parentName: Bone ShinL01
+      position: {x: 0.000512608, y: -0.0003874803, z: -0.0033614098}
+      rotation: {x: -0.016918167, y: 0.16679819, z: 0.029594336, w: 0.98540163}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Mesh13
+      parentName: Bone Mesh05
+      position: {x: 0.00018987899, y: 0.00031688024, z: -0.0009188399}
+      rotation: {x: -0.045996834, y: 0.13801764, z: 0.97242063, w: 0.18230085}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: Mesh13_end
+      parentName: Mesh13
+      position: {x: -0, y: 0.00049999997, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: 'Foot Right Ref '
+      parentName: Bone Mesh05
+      position: {x: -0.0003139281, y: 0.0008426603, z: -0.0013436091}
+      rotation: {x: 6.938894e-18, y: -1.16415294e-10, z: -0.000000003925379, w: 1}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: Foot Right Ref _end
+      parentName: 'Foot Right Ref '
+      position: {x: -0, y: 0.00049999997, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BoneSphere10
+      parentName: Bone Pelvis01
+      position: {x: 0.00015215598, y: 0.0013575989, z: -0.00038903122}
+      rotation: {x: -0.13242505, y: -0.0191069, z: 0.007147316, w: 0.99098307}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Sphere20
+      parentName: BoneSphere10
+      position: {x: 9.536743e-11, y: 0.0011905902, z: -0.0018434612}
+      rotation: {x: -0.0000000018626451, y: 2.3283064e-10, z: 0.0000000016298147,
+        w: 1}
+      scale: {x: 0.99999994, y: 1, z: 0.99999994}
+    - name: Sphere20_end
+      parentName: Sphere20
+      position: {x: -0, y: 0.00049999997, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bone ShinL02
+      parentName: BoneSphere10
+      position: {x: -0.0005304519, y: 0.0018191305, z: -0.0033468795}
+      rotation: {x: 0.023981012, y: -0.02963908, z: -0.003085324, w: 0.99926823}
+      scale: {x: 0.99999994, y: 0.99999994, z: 0.9999999}
+    - name: ShinL04
+      parentName: Bone ShinL02
+      position: {x: -0, y: 0.0004089297, z: -0.00043985996}
+      rotation: {x: -2.328307e-10, y: 0.0000000036670822, z: 2.3283064e-10, w: 1}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: ShinL04_end
+      parentName: ShinL04
+      position: {x: -0, y: 0.00049999997, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bone Mesh08
+      parentName: Bone ShinL02
+      position: {x: 0.00051260897, y: 0.0003874696, z: -0.00336141}
+      rotation: {x: 0.039659277, y: 0.08300195, z: 0.035198115, w: 0.99513763}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: Mesh14
+      parentName: Bone Mesh08
+      position: {x: -1.6391277e-11, y: 0.00008917046, z: -0.0010283741}
+      rotation: {x: -0.022516487, y: -0.07716324, z: 0.97599345, w: 0.20242414}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: Mesh14_end
+      parentName: Mesh14
+      position: {x: -0, y: 0.00049999997, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: 'Foot Left Ref '
+      parentName: Bone Mesh08
+      position: {x: -0.00031392806, y: -0.00009794992, z: -0.001227824}
+      rotation: {x: 2.364686e-11, y: -1.3324097e-10, z: 0.0000000018325181, w: 1}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: Foot Left Ref _end
+      parentName: 'Foot Left Ref '
+      position: {x: -0, y: 0.00049999997, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: 'Origin Ref '
+      parentName: FleshGolem Nodes
+      position: {x: -0, y: -0.00000020902398, z: -0.000016676298}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Origin Ref _end
+      parentName: 'Origin Ref '
+      position: {x: -0, y: 0.00049999997, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: 'OverHead Ref '
+      parentName: FleshGolem Nodes
+      position: {x: 0.00000855321, y: -0.00000036143598, z: 0.018804898}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: OverHead Ref _end
+      parentName: 'OverHead Ref '
+      position: {x: -0, y: 0.00049999997, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SNDXDARG
+      parentName: FleshGolem Nodes
+      position: {x: 0.000058676796, y: 0.00076820893, z: 0.00561991}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SNDXDARG_end
+      parentName: SNDXDARG
+      position: {x: -0, y: 0.00049999997, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: FPTxFKL2
+      parentName: FleshGolem Nodes
+      position: {x: -0, y: 0.00045245097, z: 0.0181483}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: FPTxFKL2_end
+      parentName: FPTxFKL2
+      position: {x: -0, y: 0.00049999997, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: FPTxFKR2
+      parentName: FleshGolem Nodes
+      position: {x: 0.0016438699, y: 0.00321519, z: 0.00047951596}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: FPTxFKR2_end
+      parentName: FPTxFKR2
+      position: {x: -0, y: 0.00049999997, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SNDXFDFR
+      parentName: FleshGolem Nodes
+      position: {x: 0.0016438699, y: -0.0028, z: 0.00047951596}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SNDXFDFR_end
+      parentName: SNDXFDFR
+      position: {x: -0, y: 0.00049999997, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SNDXFDFL
+      parentName: FleshGolem Nodes
+      position: {x: -0.0032968498, y: -0.0028, z: 0.000833375}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SNDXFDFL_end
+      parentName: SNDXFDFL
+      position: {x: -0, y: 0.00049999997, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CollisionSphere01
+      parentName: FleshGolem Nodes
+      position: {x: -0.0032968498, y: 0.0031544399, z: 0.000833375}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CollisionSphere01_end
+      parentName: CollisionSphere01
+      position: {x: -0, y: 0.00049999997, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CollisionSphere02
+      parentName: FleshGolem Nodes
+      position: {x: -0, y: 0.000553507, z: 0.011181099}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CollisionSphere02_end
+      parentName: CollisionSphere02
+      position: {x: -0, y: 0.0005, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 0.01
+    rootMotionBoneName: Bone Chest
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

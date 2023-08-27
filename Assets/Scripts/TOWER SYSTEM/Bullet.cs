@@ -1,11 +1,12 @@
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class Bullet : MonoBehaviour
 {
     private Vector3 targetPosition;
     private float speed = 10f; // Adjust this value based on how fast you want the bullet to travel.
     private float closeEnoughDistance = 0.5f; // The distance at which the bullet is considered to have hit the target.
-
+    public GameObject explosionEffect;
     private void Update()
     {
         // Move the bullet towards the target position.
@@ -32,6 +33,14 @@ public class Bullet : MonoBehaviour
         // Destroy(gameObject);
         // OR
         // 2. Deactivate the bullet if you're using an object pooling mechanism (recommended for performance).
+
+
+        //destroy impact effect after 2 seconds
+        GameObject explosionInstance = Instantiate(explosionEffect, transform.position, transform.rotation);
+
+
+
+        Destroy(explosionInstance, 1.5f);
         gameObject.SetActive(false);
     }
 }
