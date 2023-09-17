@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4045327892979041662}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Container
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6029573802711540234}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Box03_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8604313902618611082}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sphere16_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6503957718260845721}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 'OverHead Ref '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,7 +136,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7514956919377743922}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Head Ref_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -167,7 +167,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3353544594803935054}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sphere15_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -198,7 +198,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3337895745091069640}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: OverHead Ref _end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -229,7 +229,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5918820215579199779}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShinL04_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -261,7 +261,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6427018794608164417}
   - component: {fileID: 881800595190438416}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FleshGolem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -393,7 +393,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7382007662755733894}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bone Mesh11_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -424,7 +424,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7236131896599343645}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Mesh13_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -455,7 +455,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8732891267820998414}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BoneSphere05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -488,7 +488,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8608444940140148962}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Weapon Ref_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -519,7 +519,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6289892569613368285}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sphere14_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -550,7 +550,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7214485242057121757}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Head Ref
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -582,7 +582,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5636471483170290951}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bone ForeArmL01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -616,7 +616,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4791283684442192171}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pelvis02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -648,7 +648,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5970497159527922695}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sphere18_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -683,9 +683,9 @@ GameObject:
   - component: {fileID: 2789793219310088473}
   - component: {fileID: 8172488880702963599}
   - component: {fileID: 2704134684989767150}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Brute Variant
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -815,7 +815,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4054570325378898098}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Mesh14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -847,7 +847,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8520215997595017045}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Box03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -879,7 +879,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2836570775228130058}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sphere20
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -912,7 +912,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4667592016490904111}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Weapon Ref
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -944,7 +944,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3974331852115028313}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sphere15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -976,7 +976,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2982916158753826653}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bone ShinL01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1009,7 +1009,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3151907118670562608}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 'Origin Ref '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1041,7 +1041,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7781143953542258435}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Hand Right Ref_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1072,7 +1072,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9117492358909411921}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sphere18
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1105,7 +1105,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6995885548217165569}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Hand Left Ref_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1136,7 +1136,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7927177706098230310}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pelvis02_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1167,7 +1167,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2908961262962357221}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sphere17
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1200,7 +1200,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2414182628932858598}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ForeArmL05_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1231,7 +1231,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4705081582499671543}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sphere20_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1262,7 +1262,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3838633567301181893}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sphere14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1294,7 +1294,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2588516228460553631}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bone ForeArmL02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1327,7 +1327,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3076346233983427368}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bone Sphere12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1360,7 +1360,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6051046938522630250}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Hand Left Ref
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1392,7 +1392,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7010838141122028304}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bone Root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1425,7 +1425,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1731954152656787037}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Foot Left Ref _end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1456,7 +1456,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4033905983623899199}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sphere16
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1488,7 +1488,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6865557425259519385}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sphere17_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1519,7 +1519,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2309542374159897590}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ForeArmL04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1551,7 +1551,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8634193190876881782}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShinL04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1583,7 +1583,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1879439185390516975}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bone Sphere08
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1616,7 +1616,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8718220255648126503}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShinL03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1649,7 +1649,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1669065449136653859}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bone ShinL02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1682,7 +1682,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4802021436873379569}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bone Mesh05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1715,7 +1715,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7523526239928095038}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShinL03_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1746,7 +1746,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4865697202431870192}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bone Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1780,7 +1780,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8947896924984478853}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chest Ref
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1812,7 +1812,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1799670878364655122}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bone Chest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1848,7 +1848,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4444388918937019007}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Mesh14_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1879,7 +1879,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1256018006753937012}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bone Sphere13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1912,7 +1912,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3477411399516902166}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Hand Right Ref
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1944,7 +1944,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 283919673908617828}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BoneSphere10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1977,7 +1977,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8473694314903043390}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bone Mesh08
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2010,7 +2010,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1406826211932802048}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sphere19
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2042,7 +2042,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5412285442045829614}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Origin Ref _end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2073,7 +2073,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6336753523795665569}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 'Foot Left Ref '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2105,7 +2105,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 95478492848253849}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Foot Right Ref _end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2136,7 +2136,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8406655937163868186}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chest Ref_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2167,7 +2167,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 953459477984269485}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ForeArmL04_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2198,7 +2198,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3781646044504299489}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ForeArmL05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2230,7 +2230,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8369724679393796452}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bone Sphere09
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2264,7 +2264,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5857917554120502819}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bone Mesh11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2296,7 +2296,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5279673053827425320}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 'Foot Right Ref '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2328,7 +2328,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7988288226485284942}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sphere19_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2359,7 +2359,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7384377399155219830}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FleshGolem Nodes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2393,7 +2393,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1789024812210545282}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bone Pelvis01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2427,7 +2427,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5608427196062516822}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Mesh13
   m_TagString: Untagged
   m_Icon: {fileID: 0}

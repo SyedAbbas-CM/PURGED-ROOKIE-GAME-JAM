@@ -46,7 +46,7 @@ public class EnemyManager : Singleton<EnemyManager>
     public float[] customWaveIntervals; // Manually set time between each wave
     public WaveState[] customWaveStates; // Manually set states for each wave
     private Vector3 spawnPosition;
-
+    public GameObject spawnPoint;
     public int enemyCount { get; set; } = 0;
     public float extendedBreakDuration = 30.0f;
 
@@ -64,7 +64,7 @@ public class EnemyManager : Singleton<EnemyManager>
     {
         if (gridGenerator.CurrentState == GridState.Generated)
         {
-            spawnPosition = gridGenerator.GetStartNode().transform.position;
+            spawnPosition = spawnPoint.transform.position;
         }
     }
 
@@ -165,7 +165,7 @@ public class EnemyManager : Singleton<EnemyManager>
     }
     public void BreakNearbyWall(GameObject enemyGameObject)
     {
-        NodeScript nearbyNode = GridGenerator.Instance.GetNodeScriptAtPosition(enemyGameObject.transform.position);
+        NodeScript nearbyNode = GridGenerator.Instance.GetNodeFromWorldPoint(enemyGameObject.transform.position);
         List<NodeScript> neighbors = GridGenerator.Instance.GetNeighbours(nearbyNode);
 
         foreach (NodeScript neighbor in neighbors)

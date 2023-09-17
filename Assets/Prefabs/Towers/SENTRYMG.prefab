@@ -411,16 +411,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f6a5db8204b6d84b8f4106762183059, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 10
+  range: 7
   damage: 1
   fireRate: 2
   AOE: 0
   partToRotate: {fileID: 3114783200606152631}
   rotationSpeed: 3
   bulletPrefab: {fileID: 0}
-  lineRenderer: {fileID: 0}
+  lineRenderer: {fileID: 8653601685315145103}
   lineDisplayTime: 0.01
-  lineTrailColor: {r: 1, g: 0.93979645, b: 0, a: 1}
+  lineTrailColor: {r: 1, g: 0.6777429, b: 0, a: 1}
   towerType: 0
   impactEffect: {fileID: 989851193739761705, guid: b59b9659ef849c543abf8d815c99c951,
     type: 3}

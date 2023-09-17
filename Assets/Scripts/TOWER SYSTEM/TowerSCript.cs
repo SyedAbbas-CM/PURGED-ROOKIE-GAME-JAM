@@ -154,8 +154,8 @@ public class Tower : MonoBehaviour
 
         if (AOE == 0)
         {
-            var enemyBeingAttacked = target.GetComponent < Enemy>();
-            if(enemyBeingAttacked != null)
+            var enemyBeingAttacked = target.GetComponent<Enemy>();
+            if (enemyBeingAttacked != null)
             {
                 enemyBeingAttacked.TakeDamage(damage);
                 if (isSlow)
@@ -166,11 +166,23 @@ public class Tower : MonoBehaviour
         }
         else
         {
+            // Get all colliders within the AOE radius around the current position
             Collider[] colliders = Physics.OverlapSphere(transform.position, AOE);
-            foreach(Collider nearbyObject in colliders)
-            {
-                Rigidbody rb = nearbyObject.GetComponent<Rigidbody>();
 
+            foreach (Collider nearbyObject in colliders)
+            {
+                Enemy enemyAOE = nearbyObject.GetComponent<Enemy>();
+
+                // If the object is an enemy
+                if (enemyAOE != null)
+                {
+                    enemyAOE.TakeDamage(damage);
+
+                    if (isSlow)
+                    {
+                        enemyAOE.currentSpeed = enemyAOE.currentSpeed / 2;
+                    }
+                }
             }
         }
 
@@ -194,6 +206,9 @@ public class Tower : MonoBehaviour
     private void LaunchBullet(Vector3 targetPosition)
     {
         GameObject bullet = Instantiate(bulletPrefab, partToRotate.position, Quaternion.identity);
-        bullet.GetComponent<Bullet>().Initialize(targetPosition); // Assuming your bullet prefab has a Bullet script that moves it to the target.
+        Bullet bulletScript = bullet.GetComponent<Bullet>();
+        bulletScript.Initialize(targetPosition);
+        bulletScript.damage = this.damage; // Pass the damage value to the bullet
+        bulletScript.AOE = this.AOE;       // Pass the AOE value to the bullet
     }
 }

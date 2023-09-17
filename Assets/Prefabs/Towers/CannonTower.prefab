@@ -1702,7 +1702,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f6a5db8204b6d84b8f4106762183059, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 25
+  range: 10
   damage: 8
   fireRate: 0.5
   AOE: 4

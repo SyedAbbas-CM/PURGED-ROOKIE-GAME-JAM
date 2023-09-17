@@ -76,8 +76,7 @@ public class GridGenerator : Singleton<GridGenerator>
         endNode.GetComponent<Renderer>().enabled = true;
         startNode.GetComponent<Renderer>().material.color = Color.green;
         endNode.GetComponent<Renderer>().material.color = Color.red;
-        startNode.canPlace = false;
-        endNode.canPlace = false;
+
 
         CurrentState = GridState.Generated;
 
@@ -191,14 +190,11 @@ public class GridGenerator : Singleton<GridGenerator>
         }
         return null;
     }
-    public NodeScript GetNodeScriptAtPosition(Vector3 position)
+    public NodeScript GetNodeScriptAtGridPosition(Vector2Int gridPosition)
     {
-        int x = Mathf.FloorToInt((position.x + width) / 2.0f); // Adjust for the node's spacing
-        int z = Mathf.FloorToInt((position.z + height) / 2.0f);
-
-        if (x >= 0 && x < width && z >= 0 && z < height)
+        if (gridPosition.x >= 0 && gridPosition.x < width && gridPosition.y >= 0 && gridPosition.y < height)
         {
-            return grid[x, z];
+            return grid[gridPosition.x, gridPosition.y];
         }
         else
         {
@@ -206,4 +202,5 @@ public class GridGenerator : Singleton<GridGenerator>
             return null;
         }
     }
+
 }

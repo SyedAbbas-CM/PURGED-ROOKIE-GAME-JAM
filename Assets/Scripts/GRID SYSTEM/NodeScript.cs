@@ -5,8 +5,8 @@ using System.Collections;
 public class NodeScript : MonoBehaviour
 {
     public Node node;
-    public bool isOccupied = false;
-    public bool canPlace = true;
+    public bool isOccupied;
+
 
 
 
@@ -40,7 +40,7 @@ public class NodeScript : MonoBehaviour
             return; // Exit early to avoid further errors
         }
 
-        if (!IsOccupied && canPlace)
+        if (!IsOccupied)
         {
             Debug.Log("Node is not occupied. Trying to place item.");
 

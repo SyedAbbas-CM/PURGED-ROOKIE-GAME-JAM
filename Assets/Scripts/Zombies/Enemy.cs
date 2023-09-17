@@ -24,19 +24,20 @@ public class Enemy : MonoBehaviour
     public float currentSpeed;
     [Header("HealthBar Thing")]
     public Image HpBar;
+    public Image HpBarBG;
     public float HpBarHeight;
     public GridGenerator gridGenerator;
-
+    public SoundManager soundmanager;
 
     private List<Node> path;
     private bool childrenVisible = false;
-    private Animator anim;
+    public Animator anim;
     private bool isAttacking = false;
     private bool isBreakingWall = false;
     private float wallBreakTimer = 0f;
     private float timeToBreakWall = 5f;
     private bool AbilityUsed = false;
-
+    private Quaternion lockedRotation;
 
     [Header("Audio")]
     public AudioSource audioSource;
@@ -61,6 +62,7 @@ public class Enemy : MonoBehaviour
     private void Awake()
     {
         enemyManager = EnemyManager.Instance;
+        audioSource = SoundManager.Instance.GetComponent<AudioSource>();
 
     }
     private void Start()
@@ -73,14 +75,14 @@ public class Enemy : MonoBehaviour
         currentSpeed = speed;
 
         pathManager = PathManager.Instance;
-
+        soundmanager = SoundManager.Instance;
+        audioSource = soundmanager.sfxSource;
         path = pathManager.GetPrimaryPath();
 
         anim = GetComponent<Animator>();
 
         maxHealth = currentHealth;
 
-        audioSource = GetComponent<AudioSource>();
 
         if (!isBackgroundMusicPlaying && backgroundMusic != null)
         {
@@ -92,6 +94,7 @@ public class Enemy : MonoBehaviour
         {
             audioSource.PlayOneShot(spawnSound);
         }
+        lockedRotation = Quaternion.Euler(90, 0, 0);
     }
 
     void FixedUpdate()
@@ -140,7 +143,11 @@ public class Enemy : MonoBehaviour
         }
 
     }
-
+    private void LateUpdate()
+    {
+        HpBar.transform.rotation = lockedRotation;
+        HpBarBG.transform.rotation = lockedRotation;
+    }
     IEnumerator BreakWallAbility()
     {
         // Stop the enemy for 5 seconds to use its ability
@@ -175,7 +182,7 @@ public class Enemy : MonoBehaviour
     NodeScript FindClosestWall()
     {
         // Get the enemy's current position node
-        NodeScript currentNode = gridGenerator.GetNodeScriptAtPosition(transform.position);
+        NodeScript currentNode = gridGenerator.GetNodeFromWorldPoint(transform.position);
 
         if (currentNode == null) return null;
 
@@ -213,7 +220,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    void Die()
+    public void Die()
     {
         anim.SetTrigger("Die");
         if (enemyType == EnemyType.SwarmCarrier)
